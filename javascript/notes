@@ -7,3 +7,4 @@ undefined => undefined
 // BigInt => 123n or 12345678901234567890n      
 // Object => { key: "value", number: 123, boolean: true, null: null, undefined: undefined }
 // Array => [1, 2, 3] or ["a", "b",
+Promise-> State of an object representing eventual completion or failure of an async function 
