@@ -1,0 +1,18 @@
+ Basic for Programming Language, PLT, OOPS concepts
+Exercises
+1. Programming Language
+Write a program to take two numbers from the user and print their sum.
+
+Create a small menu-driven program using if-else.
+
+2. Logic Techniques
+Draw a flowchart to find the largest of three numbers.
+
+Write pseudocode for making a cup of tea.
+
+3. OOPs Concepts
+Create a Vehicle class and inherit it in Car and Bike classes.
+
+Implement method overriding with a speak() method in Animal and Dog classes.
+4. create Bank class and show the encapsulation and inheritance polymorphism with deposit withdraw
+  and function and showAccountdetails method 
