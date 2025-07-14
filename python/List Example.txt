@@ -1,0 +1,3 @@
+list1=['Abc'.67,true]
+list1.append(111)
+print(list1)
