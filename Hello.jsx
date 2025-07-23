@@ -1,3 +1,6 @@
+//Below example is of JSX elements how can we make use of jsx elements dynamically to add more functionality to UI like using arithmetic operaors
+//logical operators using arrays and using form tag and using the function getMessage()
+
 import React from 'react';
 
 function getMessage(user) {
