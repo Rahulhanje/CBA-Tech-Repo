@@ -1,0 +1,77 @@
+Steps ->
+1. Install Node js
+https://nodejs.org/dist/v24.4.1/node-v24.4.1-x64.msi
+
+2. install vs code editor
+
+3. create a reactjs practice folder and open vs code editor with the folder location
+
+and open terminal make sure you are in practice folder
+then type the command in command prompt
+4. D:\CBA-Technical-Training-02-07-2025\CBA-Tech-Repo\ReactJsPractice>npm create vite@latest helloapp --template react
+5. cd helloapp
+6. npm run dev
+7. Open the browser with given url in console http://localhost:5173/
+-------------------------------------------------------------------------------------------------
+How to create Components we are creating Header and Footer components in React js application
+
+1. Create Components folder in src folder
+2. create file Header.jsx
+import React from 'react'
+
+const headerStyle ={
+  backgroundColor:'#1e293b',
+  color:'white',
+  padding:'1rem 2rem',
+  display: 'flex',
+  justifyContent:'space-between',
+  alignItems:'center',
+};
+const navStyle = {
+
+  display:'flex',
+  gap:'1rem',
+};
+
+export const Header = () => {
+  return (
+    <header style = {headerStyle}>
+      <h1>Welcome to Main Page with Header!!</h1>
+      <nav style={navStyle}>
+        <a href='/' style={{color:'white',textDecoration:'none'}}>Home</a>
+        <a href='/about' style={{color:'white',textDecoration:'none'}}>About</a>
+        <a href='/contact' style={{color:'white',textDecoration:'none'}}>Contact</a>
+
+      </nav>
+    </header> 
+  )
+}
+
+
+2. Change the Content of App.jsx
+
+import {  } from 'react'
+import './App.css'
+import { Header } from './components/Header'
+
+function App() {
+  
+
+  return (
+   <>
+      <div>
+      <Header/>
+      <main style={{padding:'2rem'}}>
+      <h2>Welcome to React App </h2>
+      <p>This is main content section!!</p>  
+      </main>  
+        
+      </div>
+        
+   </>
+  )
+}
+
+export default App
+
+
