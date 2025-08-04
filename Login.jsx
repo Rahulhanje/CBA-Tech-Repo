@@ -1,37 +1,30 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { signInWithPopup } from 'firebase/auth';
+import { auth, provider } from './Firebase'; // Adjust the import path as necessary
 
-const Login = ({ setIsAuthenticated }) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    // fake credentials for demo purposes
-    const hardcodedUsername = 'admin';
-    const hardcodedPassword = 'password';
-    if (username === hardcodedUsername && password === hardcodedPassword) {
-      setIsAuthenticated(true);
-      navigate('/dashboard'); // Redirect to dashboard on successful login
-    } else {
-      setError('Invalid username or password');
+const Login = () => {
+  const signInWithGoogle = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log("User Info:", result.user);
+      alert(`Welcome ${result.user.displayName}`);
+    } catch (error) {
+      console.error("Google Sign-In Error:", error);
     }
   };
 
   return (
-    <div>
-      <h2>Login Page</h2>
-      <form onSubmit={handleLogin}>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" /><br />
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" /><br />
-        <button type="submit">Login</button>
-        {error && <div style={{ color: 'red' }}>{error}</div>}
-      </form>
+    <div style={{ textAlign: 'center', marginTop: '100px' }}>
+      <h2>Sign In With Google</h2>
+      <button onClick={signInWithGoogle} style={{ padding: '10px 20px' }}>
+        Sign In
+      </button>
     </div>
   );
 };
 
 export default Login;
+
+
+
+  
